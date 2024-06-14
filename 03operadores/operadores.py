@@ -219,3 +219,129 @@ print(f'Novo Saldo - dividiu por 2: {saldo}')
 # atribuição com módulo
 saldo %= 4
 print(f'Novo Saldo - dividiu por 4 - pegou o resto: {saldo}')
+print('')
+
+# operadores lógicos
+
+print('Operadores lógicos')
+print('')
+
+# relembrando operadores de atribuição pra contextualizar
+
+saldo = 1000
+saque = 200
+limite = 100
+
+print(f'Saldo: {saldo}')
+print(f'Saque: {saque}')
+print(f'Limite: {limite}')
+print('')
+
+# True
+print(f'Saldo maior ou igual a saque? {saldo >= saque}')
+
+# False
+print(f'Saque menor ou igual a limite? {saque <= limite}')
+
+# operador E
+# juntamos as 2 perguntas acima numa mesma expressão com o operador E
+# resultado False, pois os dois (ou mais) lados precisam ser verdadeiros 
+# para o resultado ser verdadeiro
+print('Saldo maior ou igual a saque E Saque menor ou igual a limite?')
+print(saldo >= saque and saque <= limite)
+
+# operador OU
+# juntamos as 2 perguntas acima numa mesma expressão com o operador OU
+# resultado True, pois apenas um dos lados precisa ser verdadeir
+# para o resultado ser verdadeiro
+print('Saldo maior ou igual a saque OU Saque menor ou igual a limite?')
+print(saldo >= saque or saque <= limite)
+
+# operador negação NOT
+
+contatos_emergencia = []
+
+# Saída abaixo True
+# ele 'pergunta' mil é maior que mil e quinhentos
+# resposta é Não (False)
+# E aí ele nega, portanto Vira True
+print(not 1000 > 1500)
+
+# Saída abaixo True
+# a variável foi inicializada como lista vazia
+# lista vazia, string vazia são avaliados como False
+# negação de False é True
+print(not contatos_emergencia)
+
+# Saída abaixo False
+# String com conteúdo é True
+# a negação vira False
+print(not 'saque 1500;')
+
+# Saída abaixo True
+# a variável foi inicializada como string vazia
+# # como já dito acima sobre lista ou string vazia: são avaliados como False
+# negação de False é True 
+print(not '')
+
+# parênteses ajuda na legibilidade
+saldo = 1000
+saque = 250
+limite = 200
+conta_especial = True
+
+# tudo sem parênteses, difícil de ler
+# saída = True
+print(saldo >= saque and saque <= limite or conta_especial and saldo >= saque)
+
+# agora com parênteses, fica mais fácil de ler
+# saída = True
+print((saldo >= saque and saque <= limite) or (conta_especial and saldo >= saque))
+print('')
+
+# operadores de identidade
+
+print('Operadores de identidade')
+print('')
+
+curso = 'Curso de Python'
+nome_curso = curso
+
+saldo, limite = 200, 200
+
+# True
+print(curso is nome_curso)
+
+# False
+print(curso is not nome_curso)
+
+# True = não entendi pq, na minha mente seria False
+# mas ok, agora não vou parar por isso
+# vou continuar sabendo disso e pesquisar
+print(saldo is limite)
+print('')
+
+# operadores de associação
+
+print('Operadores de associação')
+print('')
+
+curso = 'Curso de Python'
+frutas = ['Uva', 'Pera', 'Limão', 'Melão']
+saques = [1500, 100]
+carros = ['Gol', 'Uno', 'Up', 'Fox', 'Ka', 'Celta']
+times = ['Palmeiras', 'Real Madrid', 'Bayern de Munique', 'Milan']
+
+# True
+print('Python' in curso)
+
+# True
+print('maçã' not in frutas)
+
+# False
+print(200 in saques)
+
+
+
+
+
